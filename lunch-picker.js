@@ -47,3 +47,32 @@ function removeFirstLunch (lunchArray) {
 
 removeFirstLunch(["Salad", "Eggs", "Cheese"]);
 removeFirstLunch(["Sushi", "Pizza", "Burger"]);
+
+function getRandomLunch (lunchArray) {
+  if (lunchArray.length === 0) {
+    console.log("No lunches available.");
+    return;
+  }
+
+  const randomIndex = Math.floor(Math.random() * lunchArray.length);
+  const randomItem = lunchArray[randomIndex]; 
+
+  console.log(`Randomly selected lunch: ${randomItem}`);
+}
+
+getRandomLunch([]);
+getRandomLunch(["Rice", "Beans", "Chicken"]);
+
+
+function showLunchMenu (lunchArray) {
+  if (lunchArray.length === 0) {
+    console.log("The menu is empty.");
+    return;
+  }
+
+  console.log("Menu items: " + lunchArray.join(", "));
+}
+
+showLunchMenu([]);
+showLunchMenu(["Greens", "Corns", "Beans"]);
+showLunchMenu(["Pizza", "Burger", "Fries", "Salad"]);
